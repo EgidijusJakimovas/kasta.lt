@@ -1,0 +1,21 @@
+{
+    "content-hash": "d44c074f79b3eb2ae94e0893d237c89c",
+    "packages": [],
+    "packages-dev": [],
+    "root": {
+        "name": "kasta.lt",
+        "version": "1.0.0",
+        "reference": "0000000000000000000000000000000000000000",
+        "type": "project",
+        "install-path": "",
+        "aliases": [],
+        "dev": false
+    },
+    "metadata": {
+        "files": [],
+        "installed": [],
+        "packages": [],
+        "packages-dev": []
+    },
+    "version": "2.1.11.0"
+}
