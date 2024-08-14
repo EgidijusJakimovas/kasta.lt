@@ -3,7 +3,7 @@
     "packages": [],
     "packages-dev": [],
     "root": {
-        "name": "kasta.lt",
+        "name": "kasta/website",
         "version": "1.0.0",
         "reference": "0000000000000000000000000000000000000000",
         "type": "project",
