@@ -1,10 +1,5 @@
 {
-  "name": "kasta.lt",
-  "description": "Kasta.lt Project",
-  "type": "project",
   "require": {
-    "php": "^7.4 || ^8.0"
-  },
-  "license": "MIT",
-  "minimum-stability": "stable"
+      "php": "^7.4 || ^8.0"
+  }
 }
