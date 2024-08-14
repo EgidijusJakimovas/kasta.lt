@@ -1,1 +1,8 @@
+# Serve index.php or index.html
 DirectoryIndex index.php index.html
+
+# Allow access to static files
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
