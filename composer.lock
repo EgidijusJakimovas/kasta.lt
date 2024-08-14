@@ -1,21 +1,19 @@
 {
-    "content-hash": "d44c074f79b3eb2ae94e0893d237c89c",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "content-hash": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "packages": [],
     "packages-dev": [],
-    "root": {
-        "name": "kasta/website",
-        "version": "1.0.0",
-        "reference": "0000000000000000000000000000000000000000",
-        "type": "project",
-        "install-path": "",
-        "aliases": [],
-        "dev": false
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.4 || ^8.0"
     },
-    "metadata": {
-        "files": [],
-        "installed": [],
-        "packages": [],
-        "packages-dev": []
-    },
-    "version": "2.1.11.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
