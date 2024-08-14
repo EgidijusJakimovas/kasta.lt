@@ -1,6 +1,6 @@
 {
-    "require": {
+  "name": "kasta.lt",
+  "require": {
       "php": "^7.4 || ^8.0"
-    }
   }
-  
+}
