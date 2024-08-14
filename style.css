@@ -1,3 +1,5 @@
+/* Default Styles (for larger screens like PCs) */
+
 /* Reset default margin and padding */
 body,
 ul {
@@ -125,4 +127,93 @@ footer {
   position: relative;
   width: 100%;
   bottom: 0;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .carousel {
+    width: 100%;
+    height: auto; /* Adjust height to fit images */
+  }
+
+  img.custom-size {
+    width: 100%;
+    height: auto;
+  }
+
+  .logo-size {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Phones in Portrait Mode */
+@media (max-width: 768px) {
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  img.custom-size {
+    width: 100%;
+    height: auto;
+  }
+
+  .logo-size {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+/* Phones in Landscape Mode */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  img.custom-size {
+    width: 100%;
+    height: auto;
+  }
+
+  .logo-size {
+    width: 150px;
+    height: 150px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    margin: 0 5px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
 }
