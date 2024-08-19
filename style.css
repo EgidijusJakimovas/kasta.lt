@@ -1,17 +1,16 @@
-/* Default Styles (for larger screens like PCs) */
+/* General Styles */
 
-/* Reset default margin and padding */
 body,
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* Styling the body */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
+  padding-top: 70px; /* Adjust this value according to the height of your nav bar */
 }
 
 h1 {
@@ -23,6 +22,11 @@ h1 {
 nav {
   background-color: #333;
   padding: 10px 0;
+  position: fixed; /* Fixes the navigation bar to the top of the viewport */
+  top: 0; /* Aligns the navigation bar to the top of the screen */
+  left: 0; /* Aligns the navigation bar to the left edge of the screen */
+  width: 100%; /* Ensures the navigation bar spans the full width of the viewport */
+  z-index: 1000; /* Ensures the navigation bar is on top of other content */
 }
 
 nav ul {
@@ -45,6 +49,104 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add offset for fixed navbar */
+h1 {
+  scroll-margin-top: 50px; /* Adjust this value to match the height of your navbar */
+}
+
+/* Flexbox Layout for Side-by-Side Images */
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 60px; /* Add some space around the images */
+}
+
+/* Image Container for Hover Effect */
+.image-container {
+  position: relative;
+  flex: 1; /* Allow the images to take equal space */
+  margin: 0 20px; /* Add space between the images */
+  max-width: 45%; /* Ensure images do not exceed 45% of the container width */
+  overflow: hidden; /* Hide overflow to ensure the image doesn't exceed container bounds */
+  border-radius: 10px; /* Rounds corners of images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow to image containers */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Slightly scale up the image container on hover */
+}
+
+/* Style the image to fit the container */
+.image-container img {
+  width: 100%;
+  height: auto; /* Adjust height to maintain aspect ratio */
+  object-fit: cover; /* Make sure the image covers the container without distortion */
+  filter: grayscale(100%); /* Set image to grayscale by default */
+  transition: filter 0.5s ease; /* Smooth transition for the color effect */
+  display: block; /* Ensures no extra space below the image */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes any default padding */
+}
+
+/* Ensure text inside image containers does not inherit unwanted styles */
+.image-content h1 {
+  position: absolute;
+  bottom: 15px; /* Position the text inside the image container */
+  left: 0;
+  width: 100%;
+  margin-bottom: 150px;
+  padding: 15px;
+  color: #fff; /* Text color */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+  text-align: center; /* Center the text */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* More elegant font */
+  font-size: 24px; /* Increase font size for better readability */
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow to text for better contrast */
+  z-index: 1; /* Ensure text is on top of the overlay */
+}
+
+/* Overlay content that appears on hover */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Darker semi-transparent overlay */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0; /* Place the overlay behind the text */
+}
+
+/* When hovering over the container, remove the grayscale and show the overlay */
+.image-container:hover img {
+  filter: grayscale(0%); /* Remove grayscale on hover */
+}
+
+.image-container:hover .overlay {
+  opacity: 0.6; /* Slightly lighter overlay on hover */
+}
+
+.custom-size {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image {
+  max-width: 750px; /* Ensure container does not exceed this width */
+  margin: 0 auto; /* Center the container */
+}
+
 /* Carousel Styles */
 .carousel {
   position: relative;
@@ -60,8 +162,8 @@ nav ul li a:hover {
   display: none;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire carousel area */
-  border-radius: 10px; /* Rounds corners of images inside the carousel */
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* Control buttons */
@@ -91,32 +193,23 @@ nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Image */
-.image-container {
+/* Logo */
+.logo-container {
   text-align: center;
 }
 
-img.custom-size {
-  width: 750px;
-  height: 450px;
+.logo-container-home {
+  text-align: center;
+  margin-top: -50px;
+}
+
+img.logo-size {
+  width: 200px;
+  height: 200px;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
 }
-
-/* Logo */
-.logo-container {
-    margin-top: 15px;
-    text-align: center;
-  }
-  
-  img.logo-size {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-  }
 
 /* Footer */
 footer {
