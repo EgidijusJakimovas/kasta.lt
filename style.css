@@ -63,7 +63,6 @@ h1 {
 .image-wrapper {
   display: flex;
   align-items: center;
-  margin-top: 50px;
   margin-left: 60px; /* Add some space around the images */
 }
 
@@ -77,22 +76,25 @@ h1 {
   border-radius: 10px; /* Rounds corners of images */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow to image containers */
   transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
-}
-
-.image-container:hover {
-  transform: scale(1.05); /* Slightly scale up the image container on hover */
+  line-height: 1; /* Prevents space caused by inline elements */
 }
 
 /* Style the image to fit the container */
 .image-container img {
+  display: block; /* Ensures no extra space below the image */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes any default padding */
+  border: none; /* Removes any default border */
+  outline: none; /* Removes any default outline */
   width: 100%;
   height: auto; /* Adjust height to maintain aspect ratio */
   object-fit: cover; /* Make sure the image covers the container without distortion */
   filter: grayscale(100%); /* Set image to grayscale by default */
   transition: filter 0.5s ease; /* Smooth transition for the color effect */
-  display: block; /* Ensures no extra space below the image */
-  margin: 0; /* Removes any default margin */
-  padding: 0; /* Removes any default padding */
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Slightly scale up the image container on hover */
 }
 
 /* Ensure text inside image containers does not inherit unwanted styles */
@@ -206,6 +208,14 @@ h1 {
 img.logo-size {
   width: 200px;
   height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+img.logo-size-home {
+  width: 150px;
+  height: 150px;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
