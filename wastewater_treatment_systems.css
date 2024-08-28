@@ -9,7 +9,11 @@ ul {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background: linear-gradient(
+    to right,
+    #380036,
+    #0cbaba
+  ); /* Gradient background */
   color: #333;
   padding-top: 70px; /* Adjust this value according to the height of your nav bar */
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -17,14 +21,18 @@ body {
 }
 
 h1 {
-  color: #2c3e50;
+  color: white;
   text-align: center;
   margin: 20px 0;
 }
 
 /* Navigation Bar */
 nav {
-  background-color: #333;
+  background: linear-gradient(
+    to right,
+    #380036,
+    #0cbaba
+  ); /* Gradient background */
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -121,6 +129,34 @@ h1 {
   scroll-margin-top: 70px; /* Adjust this value to match the height of your navbar */
 }
 
+p {
+  color: white;
+  text-align: center;
+}
+
+/* Additional Styles for Description Section */
+.description {
+    padding: 20px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
+    max-width: 1200px; /* Increase width for more columns */
+    margin: 20px auto; /* Center and add margin */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create columns that fit available space */
+    gap: 20px; /* Space between columns */
+  }
+  
+  .description p {
+    line-height: 1.6; /* Increase line height for readability */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .description strong {
+    color: black; /* Match the color of the header */
+    font-size: 18px; /* Slightly larger font size for headings */
+  }
+  
+
 /* Footer */
 footer {
   background-color: #333;
@@ -158,6 +194,10 @@ footer {
   .carousel .prev,
   .carousel .next {
     font-size: 14px;
+  }
+
+  .description {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width for tablets */
   }
 }
 
@@ -198,6 +238,10 @@ footer {
   .carousel .next {
     font-size: 12px;
     padding: 8px;
+  }
+
+  .description {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
   }
 }
 
@@ -241,7 +285,12 @@ footer {
     padding: 10px;
   }
 
-  footer p {
-    margin: 5px 0;
+  .description {
+    grid-template-columns: 1fr; /* Ensure single column layout on very small screens */
+  }
+
+  footer {
+    font-size: 12px; /* Adjust footer font size for very small screens */
+    padding: 8px;
   }
 }
