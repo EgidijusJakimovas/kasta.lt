@@ -15,7 +15,7 @@ body {
     #0cbaba
   ); /* Gradient background */
   color: #333;
-  padding-top: 70px; /* Adjust this value according to the height of your nav bar */
+  padding-top: 50px; /* Adjust this value according to the height of your nav bar */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   box-sizing: border-box; /* Include padding and borders in element's width and height */
 }
@@ -23,7 +23,15 @@ body {
 h1 {
   color: white;
   text-align: center;
-  margin: 20px 0;
+  margin: 50px 0;
+  scroll-margin-top: 40px; /* Adjust this value to match the height of your navbar */
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin: 50px 0;
+  scroll-margin-top: 40px; /* Adjust this value to match the height of your navbar */
 }
 
 /* Navigation Bar */
@@ -110,9 +118,19 @@ nav ul li a:hover {
 }
 
 /* Image Styles */
-.custom-size {
+.custom-img {
   width: 100%;
   max-width: 750px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Image Styles */
+.custom-logo {
+  width: 100%;
+  max-width: 150px;
   height: auto;
   border-radius: 10px;
   margin: 20px auto;
@@ -124,11 +142,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Add offset for fixed navbar */
-h1 {
-  scroll-margin-top: 70px; /* Adjust this value to match the height of your navbar */
-}
-
 p {
   color: white;
   text-align: center;
@@ -136,36 +149,123 @@ p {
 
 /* Additional Styles for Description Section */
 .description {
-    padding: 20px; /* Padding around the text */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
-    max-width: 1200px; /* Increase width for more columns */
-    margin: 20px auto; /* Center and add margin */
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create columns that fit available space */
-    gap: 20px; /* Space between columns */
-  }
-  
-  .description p {
-    line-height: 1.6; /* Increase line height for readability */
-    margin: 0; /* Remove default margin */
-  }
-  
-  .description strong {
-    color: black; /* Match the color of the header */
-    font-size: 18px; /* Slightly larger font size for headings */
-  }
-  
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
+  max-width: 1200px; /* Increase width for more columns */
+  margin: 20px auto; /* Center and add margin */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Create columns that fit available space */
+  gap: 20px; /* Space between columns */
+}
+
+.description p {
+  line-height: 1.6; /* Increase line height for readability */
+  margin: 0; /* Remove default margin */
+}
+
+.description strong {
+  color: black; /* Match the color of the header */
+  font-size: 18px; /* Slightly larger font size for headings */
+}
+
+.contact {
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
+  max-width: 1200px; /* Increase width for more columns */
+  margin: 20px auto; /* Center and add margin */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Create columns that fit available space */
+  gap: 20px; /* Space between columns */
+}
+
+.contact p {
+  line-height: 1.6; /* Increase line height for readability */
+  margin: 0; /* Remove default margin */
+}
+
+.contact strong {
+  color: black; /* Match the color of the header */
+  font-size: 18px; /* Slightly larger font size for headings */
+}
+
+.contact span {
+  display: block; /* Display text after colon on a new line */
+  margin-top: 5px; /* Space above the text */
+}
+
+.services-container {
+  display: flex; /* Display child items in a row */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add space between items */
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.service-item {
+  text-align: center; /* Center text below images */
+}
+
+.custom-logo {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the social media section */
+#social-media {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  color: black;
+}
+
+.social-icon {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+  font-size: 18px; /* Adjust font size */
+  display: flex;
+  align-items: center; /* Center icons and text vertically */
+  gap: 8px; /* Space between icon and text */
+}
+
+.social-icon i {
+  font-size: 24px; /* Adjust icon size */
+  transition: none; /* Disable hover effect */
+}
+
+.social-icon:hover {
+  color: inherit; /* Ensure color doesn't change on hover */
+}
+
+.social-icon:hover i {
+  transform: none; /* Ensure icon doesn't change on hover */
+}
 
 /* Footer */
 footer {
-  background-color: #333;
+  background: linear-gradient(
+    to right,
+    #380036,
+    #0cbaba
+  ); /* Gradient background */
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 5px 0;
   position: relative;
   width: 100%;
   box-sizing: border-box; /* Ensure footer width calculation includes padding */
+  margin-top: 50px;
 }
 
 /* Media Queries */
@@ -197,7 +297,10 @@ footer {
   }
 
   .description {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width for tablets */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust column width for tablets */
   }
 }
 
@@ -243,57 +346,74 @@ footer {
   .description {
     grid-template-columns: 1fr; /* Single column layout for small screens */
   }
+
+  .services-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items vertically */
+  }
+
+  .custom-logo {
+    width: 80px; /* Adjust size for smaller screens */
+  }
 }
 
 /* For screens smaller than 480px (phones) */
 @media (max-width: 480px) {
-    nav {
-      position: static; /* Ensure navigation is static on phones */
-    }
-  
-    nav ul {
-      flex-direction: column;
-      padding: 0;
-    }
-  
-    nav ul li {
-      margin: 8px 0;
-      padding-left: 10px; /* Add left padding to ensure text is not flush with the edge */
-    }
-  
-    nav ul li a {
-      font-size: 14px;
-    }
-  
-    h1 {
-      font-size: 20px;
-    }
-  
-    .carousel,
-    .custom-size {
-      width: calc(100% - 20px); /* Ensure there's space on both sides */
-      max-width: 100%; /* Full width within the viewport */
-      margin: 10px auto; /* Center and add margin */
-    }
-  
-    .carousel .prev,
-    .carousel .next {
-      font-size: 10px;
-      padding: 6px;
-    }
-  
-    footer {
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    .description {
-      grid-template-columns: 1fr; /* Ensure single column layout on very small screens */
-    }
-  
-    footer {
-      font-size: 12px; /* Adjust footer font size for very small screens */
-      padding: 8px;
-    }
+  nav {
+    position: static; /* Ensure navigation is static on phones */
   }
-  
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+    padding-left: 10px; /* Add left padding to ensure text is not flush with the edge */
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .carousel,
+  .custom-size {
+    width: calc(100% - 20px); /* Ensure there's space on both sides */
+    max-width: 100%; /* Full width within the viewport */
+    margin: 10px auto; /* Center and add margin */
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .description {
+    grid-template-columns: 1fr; /* Ensure single column layout on very small screens */
+  }
+
+  footer {
+    font-size: 12px; /* Adjust footer font size for very small screens */
+    padding: 8px;
+  }
+
+  .services-container {
+    flex-direction: column; /* Ensure items are stacked vertically */
+    align-items: center; /* Center items vertically */
+  }
+
+  .custom-logo {
+    width: 70px; /* Further adjust size for very small screens */
+  }
+}
