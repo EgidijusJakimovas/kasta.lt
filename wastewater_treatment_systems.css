@@ -265,7 +265,7 @@ footer {
   position: relative;
   width: 100%;
   box-sizing: border-box; /* Ensure footer width calculation includes padding */
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 /* Media Queries */
