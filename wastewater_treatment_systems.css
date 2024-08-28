@@ -272,148 +272,143 @@ footer {
 
 /* For screens smaller than 1024px (tablets, small laptops) */
 @media (max-width: 1024px) {
-  .carousel,
-  .custom-size {
-    width: calc(100% - 20px); /* Ensure there's space on both sides */
-    max-width: 750px; /* Keep max-width consistent */
-    margin: 10px auto; /* Center and add margin */
+    .carousel,
+    .custom-size {
+      width: calc(100% - 20px); /* Ensure there's space on both sides */
+      max-width: 750px; /* Keep max-width consistent */
+      margin: 10px auto; /* Center and add margin */
+    }
+  
+    nav ul {
+      padding-left: 0;
+    }
+  
+    nav ul li {
+      margin: 0 8px;
+    }
+  
+    nav ul li a {
+      font-size: 16px;
+    }
+  
+    .carousel .prev,
+    .carousel .next {
+      font-size: 14px;
+    }
+  
+    .description {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+      ); /* Adjust column width for tablets */
+    }
   }
-
-  nav ul {
-    padding-left: 0;
+  
+  /* For screens smaller than 768px (large phones, small tablets) */
+  @media (max-width: 768px) {
+    nav {
+      position: static; /* Change from fixed to static */
+    }
+  
+    body {
+      padding-top: 0; /* Adjust padding-top for mobile */
+    }
+  
+    .carousel,
+    .custom-size {
+      width: calc(100% - 20px); /* Ensure there's space on both sides */
+      margin: 10px auto; /* Center and add margin */
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    nav ul li a {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+  
+    .carousel .prev,
+    .carousel .next {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .description {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+  
+    .services-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center items vertically */
+    }
+  
+    .custom-logo {
+      width: 80px; /* Adjust size for smaller screens */
+    }
   }
-
-  nav ul li {
-    margin: 0 8px;
+  
+  /* For screens smaller than 480px (phones) */
+  @media (max-width: 480px) {
+    nav {
+      position: static; /* Ensure navigation is static on phones */
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    nav ul li {
+      margin: 8px 0;
+      padding-left: 10px; /* Add left padding to ensure text is not flush with the edge */
+    }
+  
+    nav ul li a {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    .carousel,
+    .custom-size {
+      width: calc(100% - 20px); /* Ensure there's space on both sides */
+      max-width: 100%; /* Full width within the viewport */
+      margin: 10px auto; /* Center and add margin */
+    }
+  
+    .carousel .prev,
+    .carousel .next {
+      font-size: 10px;
+      padding: 6px;
+    }
+  
+    footer {
+      font-size: 12px; /* Adjust footer font size for very small screens */
+      padding: 8px;
+    }
+  
+    .description {
+      grid-template-columns: 1fr; /* Ensure single column layout on very small screens */
+    }
+  
+    .services-container {
+      flex-direction: column; /* Ensure items are stacked vertically */
+      align-items: center; /* Center items vertically */
+    }
+  
+    .custom-logo {
+      width: 70px; /* Further adjust size for very small screens */
+    }
   }
-
-  nav ul li a {
-    font-size: 16px;
-  }
-
-  .carousel .prev,
-  .carousel .next {
-    font-size: 14px;
-  }
-
-  .description {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(150px, 1fr)
-    ); /* Adjust column width for tablets */
-  }
-}
-
-/* For screens smaller than 768px (large phones, small tablets) */
-@media (max-width: 768px) {
-  nav {
-    position: static; /* Change from fixed to static */
-  }
-
-  body {
-    padding-top: 0; /* Adjust padding-top for mobile */
-  }
-
-  .carousel,
-  .custom-size {
-    width: calc(100% - 20px); /* Ensure there's space on both sides */
-    margin: 10px auto; /* Center and add margin */
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .carousel .prev,
-  .carousel .next {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  .description {
-    grid-template-columns: 1fr; /* Single column layout for small screens */
-  }
-
-  .services-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center; /* Center items vertically */
-  }
-
-  .custom-logo {
-    width: 80px; /* Adjust size for smaller screens */
-  }
-}
-
-/* For screens smaller than 480px (phones) */
-@media (max-width: 480px) {
-  nav {
-    position: static; /* Ensure navigation is static on phones */
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  nav ul li {
-    margin: 8px 0;
-    padding-left: 10px; /* Add left padding to ensure text is not flush with the edge */
-  }
-
-  nav ul li a {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  .carousel,
-  .custom-size {
-    width: calc(100% - 20px); /* Ensure there's space on both sides */
-    max-width: 100%; /* Full width within the viewport */
-    margin: 10px auto; /* Center and add margin */
-  }
-
-  .carousel .prev,
-  .carousel .next {
-    font-size: 10px;
-    padding: 6px;
-  }
-
-  footer {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .description {
-    grid-template-columns: 1fr; /* Ensure single column layout on very small screens */
-  }
-
-  footer {
-    font-size: 12px; /* Adjust footer font size for very small screens */
-    padding: 8px;
-  }
-
-  .services-container {
-    flex-direction: column; /* Ensure items are stacked vertically */
-    align-items: center; /* Center items vertically */
-  }
-
-  .custom-logo {
-    width: 70px; /* Further adjust size for very small screens */
-  }
-}
