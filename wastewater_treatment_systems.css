@@ -1,5 +1,3 @@
-/* wastewater_treatment_systems.css */
-
 /* General Styles */
 body,
 ul {
@@ -36,7 +34,11 @@ h2 {
 
 /* Navigation Bar */
 nav {
-  background: linear-gradient(to right, #380036, #0cbaba); /* Gradient background */
+  background: linear-gradient(
+    to right,
+    #380036,
+    #0cbaba
+  ); /* Gradient background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
   padding: 10px 0;
   position: fixed;
@@ -49,10 +51,10 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center the nav items horizontally */
   margin: 0;
   padding: 0;
-  gap: 50px; /* Increase spacing between nav items */
+  gap: 70px; /* Adjust gap for smaller screens in media queries */
 }
 
 nav ul li {
@@ -294,29 +296,6 @@ p {
   cursor: pointer;
 }
 
-/* Modal Styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1000; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  max-width: 800px; /* Max width for larger screens */
-  border-radius: 10px;
-}
-
 /* Button Styles */
 .open-modal {
   background-color: black; /* Example background color */
@@ -381,7 +360,7 @@ footer {
   }
 
   nav ul {
-    padding-left: 0;
+    gap: 40px; /* Adjust spacing between nav items for tablets */
   }
 
   nav ul li {
@@ -389,7 +368,7 @@ footer {
   }
 
   nav ul li a {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .carousel .prev,
@@ -408,6 +387,7 @@ footer {
 /* For screens smaller than 768px (large phones, small tablets) */
 @media (max-width: 768px) {
   nav {
+    text-align: center; /* Center text horizontally */
     position: static; /* Change from fixed to static */
   }
 
@@ -423,7 +403,7 @@ footer {
 
   nav ul {
     flex-direction: column;
-    padding: 0;
+    gap: 15px; /* Reduce gap between nav items for smaller screens */
   }
 
   nav ul li {
@@ -466,16 +446,15 @@ footer {
 
   nav ul {
     flex-direction: column;
-    padding: 0;
+    gap: 5px; /* Further reduce gap between nav items for phones */
   }
 
   nav ul li {
-    margin: 8px 0;
-    padding-left: 10px; /* Add left padding to ensure text is not flush with the edge */
+    margin: 5px 0; /* Adjust margin to match reduced gap */
   }
 
   nav ul li a {
-    font-size: 14px;
+    font-size: 12px; /* Smaller font size for very small screens */
   }
 
   h1 {
