@@ -1,8 +1,19 @@
-# Serve index.php or index.html
+# Serve home.php or home.html by default
 DirectoryIndex home.php home.html
 
 # Allow access to static files
-<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico)$">
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|webp|woff2)$">
     Order allow,deny
     Allow from all
 </FilesMatch>
+
+# Enable URL rewriting
+RewriteEngine On
+RewriteBase /
+
+# Exclude existing files and directories from being rewritten
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all other requests to home.php
+RewriteRule ^(.*)$ home.php [L]
