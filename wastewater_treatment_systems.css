@@ -36,11 +36,7 @@ h2 {
 
 /* Navigation Bar */
 nav {
-  background: linear-gradient(
-    to right,
-    #380036,
-    #0cbaba
-  ); /* Gradient background */
+  background: linear-gradient(to right, #380036, #0cbaba); /* Gradient background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
   padding: 10px 0;
   position: fixed;
@@ -56,20 +52,28 @@ nav ul {
   justify-content: center;
   margin: 0;
   padding: 0;
+  gap: 50px; /* Increase spacing between nav items */
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  display: inline-block; /* Ensure transform works on inline elements */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  backface-visibility: hidden; /* Improve rendering on scale */
+  transform: translateZ(0); /* Use hardware acceleration */
+  will-change: transform; /* Hint to browser that transform will change */
+  text-rendering: optimizeLegibility; /* Optimize text rendering */
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  text-decoration: none; /* Ensure no underline on hover */
+  transform: scale(1.2) translateZ(0); /* Slightly increase the size of the text */
 }
 
 /* Carousel Styles */
