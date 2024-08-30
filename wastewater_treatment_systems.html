@@ -18,6 +18,7 @@
         <li><a href="#contact">Kontaktai</a></li>
       </ul>
     </nav>
+
     <!-- Carousel Section 1 -->
     <h1 id="product">Nuotekų valymo įrenginiai</h1>
     <div class="image">
@@ -76,6 +77,7 @@
         </p>
       </div>
     </div>
+
     <!-- Carousel Section 2 -->
     <h1 id="installation">Mūsų darbai</h1>
     <div class="carousel" id="carousel2">
@@ -133,28 +135,33 @@
         įskaitant kasimo darbus, pagal individualius klientų poreikius.
       </p>
     </div>
+
+    <!-- Services -->
     <h1 id="services">Paslaugos</h1>
     <div class="services-container">
       <div class="service-item">
         <img
           src="/images/chat.png"
-          alt="Nemokama konsultacija"
+          alt="Valymo įrenginių montavimas"
           class="custom-logo" />
-        <p>Valymo irenginių montavimas</p>
+        <p>Valymo įrenginių montavimas</p>
+        <button class="open-modal" data-modal="modal1">Išsamiau</button>
       </div>
       <div class="service-item">
         <img
           src="/images/chat.png"
-          alt="Nemokama konsultacija"
+          alt="Valymo įrenginių aptarnavimas"
           class="custom-logo" />
         <p>Valymo įrenginių aptarnavimas</p>
+        <button class="open-modal" data-modal="modal2">Išsamiau</button>
       </div>
       <div class="service-item">
         <img
           src="/images/chat.png"
-          alt="Nemokama konsultacija"
+          alt="Rezervuarų / talpų montavimas"
           class="custom-logo" />
         <p>Rezervuarų / talpų montavimas</p>
+        <button class="open-modal" data-modal="modal3">Išsamiau</button>
       </div>
       <div class="service-item">
         <img
@@ -162,6 +169,7 @@
           alt="Drenažo įrengimas"
           class="custom-logo" />
         <p>Drenažo įrengimas</p>
+        <button class="open-modal" data-modal="modal4">Išsamiau</button>
       </div>
       <div class="service-item">
         <img
@@ -169,8 +177,78 @@
           alt="Nemokama konsultacija"
           class="custom-logo" />
         <p>Nemokama konsultacija</p>
+        <button class="open-modal" data-modal="modal5">Išsamiau</button>
       </div>
     </div>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="modal1">&times;</span>
+        <h2>Biologiniai nuotekų valymo įrenginiai</h2>
+        <p>
+          Modernus sprendimas individualiems gyvenamiesiems namams ir mažiems
+          verslams, skirtas efektyviam buitinių nuotekų apdorojimui. Siekiant
+          užtikrinti jų optimalų veikimą, svarbu, kad įrenginių montavimas būtų
+          atliktas be jokių klaidų. Tai gali padaryti tik patyrę specialistai.
+        </p>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="modal2">&times;</span>
+        <h2>Valymo įrenginių aptarnavimas</h2>
+        <p>
+          Biologiniai valymo įrenginiai veikia beveik visiškai automatiškai,
+          tačiau jų veikimui būtina reguliariai atlikti techninę priežiūrą, kuri
+          atitiktų nustatytus reikalavimus.
+        </p>
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="modal3">&times;</span>
+        <h2>Rezervuarų / talpų montavimas</h2>
+        <p>
+          Talpų ir rezervuarų pagrindinė funkcija – saugiai laikyti jose
+          esančius skysčius ar kitas medžiagas. Aukštos kokybės rezervuarai ir
+          jų profesionalus įrengimas garantuoja visišką sandarumą. Mes
+          didžiuojamės galėdami pasiūlyti aukščiausios kokybės talpų ir
+          rezervuarų montavimo paslaugas.
+        </p>
+      </div>
+    </div>
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="modal4">&times;</span>
+        <h2>Drenažo įrengimas</h2>
+        <p>
+          Didelis drėgmės lygis dažnai sukelia problemas namo pamatams ir
+          rūsiams, ypač jų požeminėse dalyse. Šias problemas gali lemti aukštas
+          gruntinio vandens lygis, o pagrindinis sprendimas yra drenažas.
+          Įrengus drenažo sistemą, perteklius drėgmės pašalinamas iš sklypo
+          paviršiaus, taip išvengiama rūsių užtvindymo ir pamatai apsaugomi nuo
+          vandens pažeidimų.
+        </p>
+      </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close" data-modal="modal5">&times;</span>
+        <h2>Nemokama konsultacija</h2>
+        <p>
+          Mūsų įmonė siūlo nemokamą konsultaciją, siekdama suteikti jums išsamią
+          informaciją apie mūsų paslaugas ir sprendimus. Kvalifikuoti
+          specialistai yra pasirengę atsakyti į visus jūsų klausimus ir padėti
+          pasirinkti tinkamiausią variantą pagal jūsų poreikius. Pasinaudoję
+          nemokama konsultacija, galėsite gauti profesionalias rekomendacijas,
+          kurios padės priimti informuotą sprendimą ir užtikrinti, kad jūsų
+          projektai būtų įgyvendinti efektyviai ir kokybiškai.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contacts -->
     <h1>Kontaktai</h1>
     <div id="contact" class="contact">
       <p><strong>Įmonės kodas:</strong> <span>306952419</span></p>
@@ -181,10 +259,14 @@
     </div>
     <h2 id="social-media">Sekite mus socialiniuose tinkluose:</h2>
     <div class="social-media-icons">
-      <a href="https://www.facebook.com/profile.php?id=61564985106745" target="_blank" class="social-icon">
+      <a
+        href="https://www.facebook.com/profile.php?id=61564985106745"
+        target="_blank"
+        class="social-icon">
         <i class="fa-brands fa-facebook"></i> Facebook
       </a>
     </div>
+
     <!-- footer -->
     <footer>
       <p>&copy; 2024 Visos teisės saugomos Kasta.lt</p>

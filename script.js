@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showSlides() {
-      slides.forEach((slide, index) => {
+      slides.forEach((slide) => {
         slide.style.display = "none";
       });
       slideIndex++;
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showSpecificSlide(n) {
-      slides.forEach((slide, index) => {
+      slides.forEach((slide) => {
         slide.style.display = "none";
       });
       slides[n - 1].style.display = "block";
@@ -58,5 +58,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // Attach controls
     carousel.querySelector(".prev").addEventListener("click", prevSlide);
     carousel.querySelector(".next").addEventListener("click", nextSlide);
+  });
+
+  // Function to open a modal
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+  }
+
+  // Function to close a modal
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+  }
+
+  // Event listeners for opening modals
+  document.querySelectorAll(".open-modal").forEach((button) => {
+    button.addEventListener("click", () => {
+      const modalId = button.getAttribute("data-modal");
+      openModal(modalId);
+    });
+  });
+
+  // Event listeners for closing modals
+  document.querySelectorAll(".close").forEach((span) => {
+    span.addEventListener("click", () => {
+      const modalId = span.getAttribute("data-modal");
+      closeModal(modalId);
+    });
+  });
+
+  // Close modals when clicking outside of modal-content
+  window.addEventListener("click", (event) => {
+    if (event.target.classList.contains("modal")) {
+      event.target.style.display = "none";
+    }
   });
 });
