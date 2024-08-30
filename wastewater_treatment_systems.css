@@ -24,7 +24,7 @@ h1 {
   color: white;
   text-align: center;
   margin: 50px 0;
-  scroll-margin-top: 40px; /* Adjust this value to match the height of your navbar */
+  scroll-margin-top: 50px; /* Adjust this value to match the height of your navbar */
 }
 
 h2 {
@@ -41,6 +41,7 @@ nav {
     #380036,
     #0cbaba
   ); /* Gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -259,6 +260,7 @@ footer {
     #380036,
     #0cbaba
   ); /* Gradient background */
+  box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
   color: white;
   text-align: center;
   padding: 5px 0;
