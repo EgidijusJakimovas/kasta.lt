@@ -52,7 +52,6 @@ h1 {
 
 .image-container:hover img {
   filter: grayscale(0%); /* Keep colored on hover */
-  transform: scale(1.05); /* Slightly enlarge the image smoothly */
 }
 
 .image-container:hover {
