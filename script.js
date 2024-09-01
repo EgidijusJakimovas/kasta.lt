@@ -64,12 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.style.display = "block";
+    document.body.classList.add("modal-open"); // Add class to body to disable scrolling
   }
 
   // Function to close a modal
   function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     modal.style.display = "none";
+    document.body.classList.remove("modal-open"); // Remove class from body to enable scrolling
   }
 
   // Event listeners for opening modals
@@ -91,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Close modals when clicking outside of modal-content
   window.addEventListener("click", (event) => {
     if (event.target.classList.contains("modal")) {
-      event.target.style.display = "none";
+      closeModal(event.target.id); // Close the modal
     }
   });
 });
