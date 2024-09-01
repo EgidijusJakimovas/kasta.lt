@@ -208,20 +208,35 @@ p {
   margin-top: 5px; /* Space above the text */
 }
 
+/* Container for services */
 .services-container {
   display: flex; /* Display child items in a row */
   justify-content: center; /* Center items horizontally */
+  align-items: stretch; /* Stretch items to match the tallest item */
   gap: 20px; /* Add space between items */
   flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  margin: 0 auto; /* Center container horizontally */
+  padding: 20px; /* Add padding around the container */
+  max-width: 1200px; /* Set a max-width to control container width */
 }
 
+/* Service items */
 .service-item {
-  text-align: center; /* Center text below images */
+  display: flex; /* Use flexbox to align contents */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space items evenly within the container */
+  align-items: center; /* Center items horizontally */
+  flex: 1 1 200px; /* Flex-grow and flex-shrink, with a base width */
+  max-width: 200px; /* Ensure items don't exceed a certain width */
+  height: 250px; /* Set a fixed height for all service items */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Images */
 .custom-logo {
   width: 100px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
 }
 
 /* Styles for the social media section */
@@ -306,6 +321,7 @@ p {
   cursor: pointer; /* Pointer cursor on hover */
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s; /* Smooth transition */
+  margin-top: 10px; /* Space between text and button */
 }
 
 .open-modal:hover {
