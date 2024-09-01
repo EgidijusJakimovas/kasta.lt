@@ -32,7 +32,10 @@ h1 {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden; /* Optimize for smoother animation */
+  transform: translateZ(0); /* Enable GPU acceleration */
 }
 
 .image-container img {
@@ -40,16 +43,21 @@ h1 {
   width: 100%;
   height: auto;
   object-fit: cover;
+  object-position: center; /* Ensure the image remains centered */
   filter: grayscale(0%); /* Default to colored */
-  transition: filter 0.5s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  will-change: transform, filter;
+  backface-visibility: hidden; /* Optimize for smoother animation */
 }
 
 .image-container:hover img {
-  filter: grayscale(0%); /* Turn grayscale on hover */
+  filter: grayscale(0%); /* Keep colored on hover */
+  transform: scale(1.05); /* Slightly enlarge the image smoothly */
 }
 
 .image-container:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Increase shadow on hover */
 }
 
 .image-content h1 {
