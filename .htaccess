@@ -3,8 +3,7 @@ DirectoryIndex index.php home.html
 
 # Allow access to static files
 <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|webp|woff2)$">
-    Order allow,deny
-    Allow from all
+    Require all granted
 </FilesMatch>
 
 # Enable URL rewriting
