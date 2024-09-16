@@ -1,10 +1,5 @@
-# Serve index.php by default
-DirectoryIndex wastewater_treatment_systems.html
-
-# Allow access to static files
-<FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|webp|woff2)$">
-    Require all granted
-</FilesMatch>
+# Serve index.php by default if no file is specified
+DirectoryIndex index.php
 
 # Enable URL rewriting
 RewriteEngine On
@@ -15,4 +10,27 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Redirect all other requests to index.php
-RewriteRule ^(.*)$ wastewater_treatment_systems.html [L]
+RewriteRule ^(.*)$ index.php [L]
+
+# Enable caching for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  ExpiresByType application/x-font-woff2 "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+# Add cache-control headers for static resources
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|woff2|webp)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>

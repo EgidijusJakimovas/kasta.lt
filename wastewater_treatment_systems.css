@@ -188,31 +188,28 @@ p {
   font-size: 18px; /* Slightly larger font size for headings */
 }
 
-.contact {
+.contacts {
   padding: 20px; /* Padding around the text */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
   max-width: 1200px; /* Increase width for more columns */
   margin: 20px auto; /* Center and add margin */
   display: grid; /* Use grid layout */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(200px, 1fr)
-  ); /* Create columns that fit available space */
+  grid-template-columns: 1fr; /* Create a single column */
   gap: 20px; /* Space between columns */
 }
 
-.contact p {
+.contacts p {
   line-height: 1.6; /* Increase line height for readability */
   margin: 0; /* Remove default margin */
 }
 
-.contact strong {
+.contacts strong {
   color: black; /* Match the color of the header */
   font-size: 18px; /* Slightly larger font size for headings */
 }
 
-.contact span {
+.contacts span {
   display: block; /* Display text after colon on a new line */
   margin-top: 5px; /* Space above the text */
 }
@@ -259,6 +256,7 @@ p {
   justify-content: center;
   gap: 20px; /* Space between icons */
   color: black;
+  margin-bottom: 50px;
 }
 
 .social-icon {
