@@ -10,12 +10,5 @@ switch ($path) {
     case 'valymo_irenginiai':
         include('wastewater_treatment_systems.html');
         break;
-    case 'tvora':
-        include('fence_installation.html');
-        break;
-    default:
-        // Include home.html for root and undefined paths
-        include('home.html');
-        break;
 }
 ?>
