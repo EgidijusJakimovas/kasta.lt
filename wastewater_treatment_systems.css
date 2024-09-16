@@ -148,7 +148,7 @@ nav ul li a:hover {
   width: 100%;
   max-width: 250px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 50px;
   margin: 20px auto;
   display: block;
 }
@@ -236,13 +236,6 @@ p {
   max-width: 200px; /* Ensure items don't exceed a certain width */
   height: 250px; /* Set a fixed height for all service items */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-/* Images */
-.custom-logo {
-  width: 100px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Space between image and text */
 }
 
 /* Styles for the social media section */
