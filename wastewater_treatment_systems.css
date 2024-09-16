@@ -400,11 +400,26 @@ footer {
     font-size: 14px;
   }
 
+  .contacts {
+    max-width: 100%; /* Ensure full width of the container */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Reduce margin to add space around the container */
+  }
+
   .description {
     grid-template-columns: repeat(
       auto-fit,
       minmax(150px, 1fr)
     ); /* Adjust column width for tablets */
+    max-width: 100%; /* Ensure full width of the container */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Reduce margin to add space around the container */
+  }
+
+  .custom-img {
+    width: calc(100% - 20px); /* Reduce width to add space on both sides */
+    max-width: 730px; /* Keep the maximum width slightly smaller */
+    margin: 10px auto; /* Adjust margin to add more space around the image */
   }
 }
 
@@ -448,8 +463,17 @@ footer {
     padding: 8px;
   }
 
+  .contacts {
+    max-width: 100%; /* Ensure full width of the container */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Reduce margin to add space around the container */
+  }
+
   .description {
     grid-template-columns: 1fr; /* Single column layout for small screens */
+    max-width: 100%; /* Ensure full width of the container */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Reduce margin to add space around the container */
   }
 
   .services-container {
@@ -459,6 +483,12 @@ footer {
 
   .custom-logo {
     width: 80px; /* Adjust size for smaller screens */
+  }
+
+  .custom-img {
+    width: calc(100% - 20px); /* Reduce width to add space on both sides */
+    max-width: 680px; /* Keep the maximum width smaller for better fit */
+    margin: 10px auto; /* Adjust margin to add more space around the image */
   }
 }
 
@@ -505,6 +535,15 @@ footer {
 
   .description {
     grid-template-columns: 1fr; /* Ensure single column layout on very small screens */
+    max-width: 100%; /* Ensure full width of the container */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Reduce margin to add space around the container */
+  }
+
+  .contacts {
+    max-width: 100%; /* Ensure full width of the container */
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Reduce margin to add space around the container */
   }
 
   .services-container {
@@ -514,5 +553,11 @@ footer {
 
   .custom-logo {
     width: 70px; /* Further adjust size for very small screens */
+  }
+
+  .custom-img {
+    width: calc(100% - 20px); /* Further reduce width to add more space */
+    max-width: 400px; /* Set a maximum width suitable for small screens */
+    margin: 10px auto; /* Ensure there’s a consistent gap around the image */
   }
 }
