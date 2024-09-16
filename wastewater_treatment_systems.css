@@ -383,6 +383,10 @@ footer {
     margin: 10px auto; /* Center and add margin */
   }
 
+  h1 {
+    scroll-margin-top: 20px;
+  }
+
   nav ul {
     gap: 40px; /* Adjust spacing between nav items for tablets */
   }
@@ -455,6 +459,7 @@ footer {
 
   h1 {
     font-size: 22px;
+    scroll-margin-top: 20px;
   }
 
   .carousel .prev,
@@ -513,6 +518,7 @@ footer {
 
   h1 {
     font-size: 20px;
+    scroll-margin-top: 10px;
   }
 
   .carousel,
