@@ -1,5 +1,5 @@
 # Serve index.php by default
-DirectoryIndex index.php
+DirectoryIndex wastewater_treatment_systems.html
 
 # Allow access to static files
 <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|webp|woff2)$">
@@ -15,4 +15,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Redirect all other requests to index.php
-RewriteRule ^(.*)$ index.php [L]
+RewriteRule ^(.*)$ wastewater_treatment_systems.html [L]
