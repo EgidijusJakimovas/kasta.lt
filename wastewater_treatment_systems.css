@@ -559,4 +559,10 @@ footer {
     max-width: 400px; /* Set a maximum width suitable for small screens */
     margin: 10px auto; /* Ensure there’s a consistent gap around the image */
   }
+
+  .custom-title-logo {
+    width: 150px; /* Adjust the width for smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    margin-top: 30px;
+  }
 }
