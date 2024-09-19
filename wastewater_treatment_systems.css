@@ -22,7 +22,7 @@ h1 {
   color: white;
   text-align: center;
   margin: 50px 0;
-  scroll-margin-top: 50px; /* Adjust this value to match the height of your navbar */
+  scroll-margin-top: 70px; /* Adjust this value to match the height of your navbar */
 }
 
 h2 {
@@ -40,7 +40,7 @@ nav {
     #0cbaba
   ); /* Gradient background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Light shadow for depth */
-  padding: 10px 0;
+  padding: 12px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -64,7 +64,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
   display: inline-block; /* Ensure transform works on inline elements */
   transition: transform 0.3s ease; /* Smooth transition for hover effect */
   backface-visibility: hidden; /* Improve rendering on scale */
@@ -146,10 +146,10 @@ nav ul li a:hover {
 
 .custom-title-logo {
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   height: auto;
   border-radius: 50%;
-  margin: 20px auto;
+  margin: -10px auto -30px;
   display: block;
 }
 
