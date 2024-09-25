@@ -140,7 +140,7 @@ nav ul li a:hover {
   height: auto;
   border-radius: 10px;
   display: block;
-  margin: 50px 100px; /* Add vertical margin */
+  margin: 50px auto; /* Add vertical margin */
 }
 
 .custom-img3 {
