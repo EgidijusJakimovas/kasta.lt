@@ -134,6 +134,33 @@ nav ul li a:hover {
   display: block;
 }
 
+.custom-img2 {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 50px 100px; /* Add vertical margin */
+}
+
+.custom-img3 {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+  margin: 50px auto;
+  display: block;
+}
+
+.custom-img4 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+}
+
 /* Image Styles */
 .custom-logo {
   width: 100%;
